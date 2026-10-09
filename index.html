@@ -3,8 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Alejandro Saenz is an Engineering Manager for Application Security at Twilio. Product security, security automation, and open source tools such as Bulwark." />
+    <meta name="author" content="Alejandro Saenz" />
+    <link rel="canonical" href="https://www.alejandrosaenz.com/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Alejandro Saenz" />
+    <meta property="og:title" content="Alejandro Saenz | Engineering Manager, Application Security" />
+    <meta property="og:description" content="Engineering Manager for Application Security at Twilio. Product security, security automation, and open source tools such as Bulwark." />
+    <meta property="og:url" content="https://www.alejandrosaenz.com/" />
+    <meta property="og:image" content="https://www.alejandrosaenz.com/profile.jpg" />
+    <meta property="og:image:alt" content="Portrait of Alejandro Saenz" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Alejandro Saenz | Engineering Manager, Application Security" />
+    <meta name="twitter:description" content="Engineering Manager for Application Security at Twilio. Product security, security automation, and open source tools such as Bulwark." />
+    <meta name="twitter:image" content="https://www.alejandrosaenz.com/profile.jpg" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://www.alejandrosaenz.com/#person",
+        "name": "Alejandro Saenz",
+        "url": "https://www.alejandrosaenz.com/",
+        "image": "https://www.alejandrosaenz.com/profile.jpg",
+        "jobTitle": "Engineering Manager, Application Security",
+        "worksFor": { "@type": "Organization", "name": "Twilio", "url": "https://www.twilio.com/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Virginia Commonwealth University" },
+        "knowsAbout": [
+          "Application Security",
+          "Product Security",
+          "Threat Modeling",
+          "Secure SDLC",
+          "Security Automation",
+          "Vulnerability Management",
+          "Static Application Security Testing",
+          "TypeScript",
+          "Node.js",
+          "AWS"
+        ],
+        "sameAs": ["https://www.linkedin.com/in/saenzag/", "https://github.com/alejandrosaenz117"]
+      }
+    </script>
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://github.com https://raw.githubusercontent.com https://avatars.githubusercontent.com; connect-src https://api.github.com https://cdn.jsdelivr.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com;" />
 
     <!-- DNS prefetch for external domains -->
@@ -14,10 +56,10 @@
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="//github.com">
 
-    <title>Alejandro Saenz Professional Portfolio</title>
+    <title>Alejandro Saenz | Application Security Engineering Manager | Twilio</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./profile.jpg" />
+    <link rel="icon" type="image/jpeg" href="./profile.jpg" />
     <link rel="shortcut icon" href="./profile.jpg" />
     <link rel="apple-touch-icon" href="./profile.jpg" />
 
@@ -779,6 +821,45 @@
         100% { transform: rotate(360deg); }
       }
 
+      /* Featured project card (hand-written; reuses the repo-card look) */
+      .project-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        margin-right: 1rem;
+        flex-shrink: 0;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .project-tags li {
+        background: var(--bg-secondary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      .project-highlights {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 1rem 0 0;
+        padding-left: 1.2rem;
+      }
+
+      .project-card {
+        max-width: 760px;
+      }
+
       @media (max-width: 768px) {
         .repo-grid {
           grid-template-columns: 1fr;
@@ -836,6 +917,9 @@
             <a class="nav-link js-scroll-trigger" href="#opensource">Open Source</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#education">Education</a>
           </li>
           <li class="nav-item">
@@ -852,14 +936,26 @@
             Alejandro
             <span class="text-primary">Saenz</span>
           </h1>
+          <div class="subheading mb-2">Engineering Manager, Application Security &middot; Twilio</div>
           <div class="subheading mb-5">
             <span id="typed-text"></span><span class="cursor">|</span>
           </div>
-          <p class="lead mb-5">
-            Self-motivated, results-driven professional with excellent people skills, strong decision making abilities,
-            strong oral and written communication skills, and a high standard of work ethic, seeking a position that
-            promotes learning, encourages innovation, and supports the pursuit of discovery and excellence in the fields
-            of software engineering and application security.
+          <p class="lead mb-4">
+            I lead application security at Twilio and have spent over a decade building and breaking software, across
+            software engineering and product security. I build the automation and metrics that let security teams scale:
+            Snyk Autofactory, which imports repositories from 130+ GitHub organizations into Snyk, and the Multivac
+            security metrics framework. I was lead developer of the open source vulnerability management tool Bulwark,
+            and I speak on securing software at scale.
+          </p>
+          <p class="mb-5">
+            <a href="https://www.linkedin.com/in/saenzag/" target="_blank" rel="noopener noreferrer" class="repo-link">
+              <i class="fab fa-linkedin"></i>
+              Connect on LinkedIn
+            </a>
+            <a href="./resume.pdf" target="_blank" rel="noopener" class="repo-link ml-2">
+              <i class="fas fa-file-pdf"></i>
+              Download Resume (PDF)
+            </a>
           </p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
@@ -961,7 +1057,7 @@
                 </li>
                 <li>
                   Assisted in the Singular Security Review (SSR) strategic project where the team and I designed a
-                  singular point of entry for all security reviews. SSR compoiled engineering intake and automatically
+                  singular point of entry for all security reviews. SSR compiled engineering intake and automatically
                   associated the required security teams to the review. Furthermore, SSR utilized a custom JIRA workflow
                   which required collaboration with the internal JIRA development team.
                 </li>
@@ -1397,6 +1493,53 @@
         </div>
       </section>
 
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Projects</h2>
+
+          <div class="mb-4">
+            <p class="lead">
+              Outside of security work, I build games. Here's what I'm working on:
+            </p>
+          </div>
+
+          <div class="repo-card project-card">
+            <div class="repo-header">
+              <img class="project-logo" src="./img/extremis.png" alt="" width="56" height="56" loading="lazy" decoding="async" />
+              <a href="https://playextremis.io" target="_blank" rel="noopener noreferrer" class="repo-title">EXTREMIS</a>
+            </div>
+
+            <div class="repo-description">
+              A top-down tactical defense game. Place units and fortifications during a planning phase, then hold the line
+              against a real-time assault from an AI Director that streams in reinforcements, drops elite units by pod
+              strike, and adapts its budget to match yours. Brutal sci-fi shogunate, <em>Door Kickers</em> inverted.
+            </div>
+
+            <ul class="project-highlights">
+              <li>Procedural battlefields across five biomes, with full/half cover and line-of-sight rules</li>
+              <li>Three difficulty tiers, up to Extremis, where enemy formations and a Warlord capstone demand coordinated orders</li>
+              <li>Fully synthesized score and sound effects with WebAudio, no audio files</li>
+              <li>Works on desktop, tablet and phone, with accessibility options built in</li>
+            </ul>
+
+            <ul class="project-tags" aria-label="Technologies">
+              <li>TypeScript</li>
+              <li>Three.js</li>
+              <li>WebAudio</li>
+              <li>Cloudflare Workers</li>
+              <li>Durable Objects</li>
+            </ul>
+
+            <div class="repo-links">
+              <a href="https://playextremis.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+                <i class="fas fa-play"></i>
+                Play Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
           <h2 class="mb-5">Education</h2>
@@ -1598,8 +1741,8 @@
     <script>
       // Typing animation for hero section
       const texts = [
-        "Staff Product Security Engineer",
-        "Software Developer",
+        "Application Security",
+        "Software Development",
         "Open Source Contributor",
       ];
       
